@@ -29,6 +29,8 @@ Node *BasicList_add(BasicList *lst, int type, uint32_t len);
 
 Node *BasicList_insert(BasicList *lst, uint32_t pos_at, int type, uint32_t len);
 
+Node* BasicList_remove(BasicList* lst, uint32_t pos_at);
+
 void BasicList_delete(BasicList *lst,uint32_t pos_at);
 
 Node* BasicList_update(BasicList *lst,uint32_t pos_at,int type, uint32_t len);
@@ -36,5 +38,13 @@ Node* BasicList_update(BasicList *lst,uint32_t pos_at,int type, uint32_t len);
 Node* BasicList_get(BasicList *lst,uint32_t pos_at);
 
 void BasicList_set_Destructor(BasicList* lst, int nb_type, Destructor destructor);
+
+Node* BasicList_queue_in(BasicList* lst, int type, uint32_t len);
+
+Node* BasicList_queue_out(BasicList* lst);
+
+Node* BasicList_stack_push(BasicList* lst, int type, uint32_t len);
+
+Node* BasicList_stack_pop(BasicList* lst);
 
 #endif
